@@ -1,0 +1,5 @@
+{
+  "name": "Family Tree Builder",
+  "description": "A scalable family tree system with persistent storage, hierarchical layout, search, multi-language support, and JSON/CSV import/export.",
+  "requestFramePermissions": []
+}
