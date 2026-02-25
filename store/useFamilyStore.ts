@@ -118,8 +118,8 @@ const initialEdges: FamilyEdge[] = [
 ];
 
 export const useFamilyStore = create<FamilyState>((set, get) => ({
-  nodes: initialNodes,
-  edges: initialEdges,
+  nodes: [],
+  edges: [],
   selectedNodeId: null,
   selectedEdgeId: null,
   
@@ -265,6 +265,11 @@ export const useFamilyStore = create<FamilyState>((set, get) => ({
     const dbEdges = await db.edges.toArray();
     if (dbNodes.length > 0) {
       set({ nodes: dbNodes as FamilyNode[], edges: dbEdges as FamilyEdge[] });
+    } else {
+      // First time load - initialize with sample data
+      await db.nodes.bulkAdd(initialNodes);
+      await db.edges.bulkAdd(initialEdges);
+      set({ nodes: initialNodes, edges: initialEdges });
     }
   },
   

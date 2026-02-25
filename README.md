@@ -1,8 +1,9 @@
-# Run and deploy your AI Studio app
+# Run and deploy your AI Family tree builder app
+
+Family Tree Builder
+A scalable family tree system with persistent storage, hierarchical layout, search, multi-language support, and JSON/CSV import/export.
 
 This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/c91e8421-534a-48be-b3f7-5009dabfecc5
 
 ## Run Locally
 
@@ -11,6 +12,6 @@ View your app in AI Studio: https://ai.studio/apps/c91e8421-534a-48be-b3f7-5009d
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key if need
 3. Run the app:
    `npm run dev`
